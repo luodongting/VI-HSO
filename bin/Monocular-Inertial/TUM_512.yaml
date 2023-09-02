@@ -1,0 +1,60 @@
+%YAML:1.0
+
+
+Camera.type: "EquiDistant"
+
+Camera.fx: 190.978477
+Camera.fy: 190.973307
+Camera.cx: 254.931706
+Camera.cy: 256.897442
+
+Camera.k1: 0.003482389402
+Camera.k2: 0.000715034845
+Camera.k3: -0.002053236141
+Camera.k4: 0.000202936736
+    
+Camera.width: 512
+Camera.height: 512
+Camera.fps: 20.0
+
+# Transformation from body-frame (imu) to camera
+Tbc: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [-0.9995250378696743, 0.0075019185074052044, -0.02989013031643309, 0.045574835649698026, 
+          0.029615343885863205, -0.03439736061393144, -0.998969345370175, -0.071161801837997044,
+         -0.008522328211654736, -0.9993800792498829, 0.03415885127385616, -0.044681254117144367,
+          0.0, 0.0, 0.0, 1.0]
+
+IMU.NoiseGyro: 0.00016
+IMU.NoiseAcc: 0.0028
+IMU.GyroWalk: 0.000022 
+IMU.AccWalk: 0.00086
+IMU.Frequency: 200
+
+
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -3.5 
+Viewer.ViewpointF: 500
+
+
+priorG0: 1e2
+priorA0: 1e10 
+priorG1: 1.0
+priorA1: 1e5 
+priorG2: 0.0
+priorA2: 0.0
+priorGBA0: 1e2
+priorABA0: 1e6 
+priorGBA1: 1.0 
+priorABA1: 1e6
+priorGBA2: 1e2
+priorABA2: 1e6

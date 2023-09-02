@@ -1,0 +1,36 @@
+%YAML:1.0
+
+Track_Name: "VI-HSO"
+Trace_Dir: "/temp"
+IMU.used: 1
+
+Initialization.nPyramidLevels: 3
+Initialization.MinThDisparity: 40
+Initialization.MinThTrackFeatures: 50
+Initialization.MinRANSACInliers: 40
+Initialization.MapScale: 1.0
+
+LucasKanade.MaxLevel: 4
+LucasKanade.MinLevel: 0
+
+VisiualOptimize.ThError: 2.0
+VisiualOptimize.nIterator: 12
+
+LocalBA.ThCornorError: 2.0
+LocalBA.ThEdgeLetError: 1.2
+LocalBA.ThRobustHuberWidth: 1.0
+LocalBA.nIterator: 10
+LocalBA.nNeighborKFs: 7
+
+Map.MinDistTwoKF: 0.12
+
+Map.MaxKFs: 2000
+IMU.Delay: 0.0
+
+Track.MaxFeatures: 200
+Track.MinFeatures: 5
+Track.MaxDropFeatures: 40
+
+Feature.EdgeLetCosAngle: 0.86
+FeatureExtractor.GridSize: 8
+MaxDropKFs: 13

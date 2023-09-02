@@ -1,0 +1,63 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+Camera.type: "PinHole"
+
+Camera.fx: 458.654
+Camera.fy: 457.296
+Camera.cx: 367.215
+Camera.cy: 248.375
+
+Camera.k1: -0.28340811
+Camera.k2: 0.07395907
+Camera.p1: 0.00019359
+Camera.p2: 1.76187114e-05
+
+Camera.width: 752
+Camera.height: 480
+Camera.fps: 20.0
+
+# Transformation from camera to body-frame (imu)
+Tbc: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [0.0148655429818, -0.999880929698, 0.00414029679422, -0.0216401454975,
+         0.999557249008, 0.0149672133247, 0.025715529948, -0.064676986768,
+        -0.0257744366974, 0.00375618835797, 0.999660727178, 0.00981073058949,
+         0.0, 0.0, 0.0, 1.0]
+
+# IMU noise
+IMU.NoiseGyro: 1.7e-4 
+IMU.NoiseAcc: 2.0000e-3
+IMU.GyroWalk: 1.9393e-05 
+IMU.AccWalk: 3.0000e-03 
+g_norm: 9.8000
+IMU.Frequency: 200
+
+
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -3.5 
+Viewer.ViewpointF: 500
+
+priorG0: 1e2
+priorA0: 1e10 
+priorG1: 1.0
+priorA1: 1e5 
+priorG2: 0.0
+priorA2: 0.0
+priorGBA0: 1e2
+priorABA0: 1e6 
+priorGBA1: 1.0 
+priorABA1: 1e6
+priorGBA2: 1e2
+priorABA2: 1e6 
